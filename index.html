@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <title>💄 Maquillaje Glam</title>
     <link rel="stylesheet" href="estilos.css">
@@ -11,19 +12,45 @@
 <body>
   <header>
     <h1>✨ Maquillaje Glam 💄</h1>
-    <p>Descubre tus productos favoritos, escucha música y diviértete 🎶</p>
+    <p>Descubre tus productos favoritos, con mejor precio y calidad💄🌼</p>
     <button id="ver-carrito">🛒 Ver Carrito (<span id="contador">0</span>)</button>
   </header>
-
+    
+</script>
   <section id="catalogo">
-    <h2>🌸 Productos</h2>
+    <h2>🌸 Nuestros Productos</h2>
     <div id="productos" class="scroll-horizontal"></div>
   </section>
-
-  <section id="carrito-seccion" style="display:none;">
-    <h2>🛍️ Tu Carrito</h2>
-    <ul id="lista-carrito"></ul>
+ 
+    <!-- Sección de metodos de Pago-->
+  <section id="metodos-pago">
+    <h2>💳 Nuestros Metodos de Pago</h2>
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; align-items: center;">
+      <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" width="60">
+        <p>PayPal</p>
+      </div>
+      <div>
+        <img src="data:image/png;base64,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" alt="Nequi" width="60">
+        <p>Nequi</p>
+      </div>
+      <div>
+        <img src="data:image/png;base64,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" alt="Daviplata" width="60">
+        <p>Daviplata</p>
+      </div>
+      <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa" width="60">
+        <p>Tarjeta Visa</p>
+      </div>
+      <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="MasterCard" width="60">
+        <p>MasterCard</p>
+      </div>
+    </div>
   </section>
+</div>
+<div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 999;" onclick="cerrarModal()"></div>
+
 
   <section id="tips">
     <h2>💡 Tips de Maquillaje</h2>
