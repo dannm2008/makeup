@@ -72,12 +72,8 @@ const productos = [
       li.textContent = `${p.nombre} - ${p.precio}`;
       lista.appendChild(li);
     });
-  }
-  
-  document.getElementById("ver-carrito").addEventListener("click", () => {
-    const seccion = document.getElementById("carrito-seccion");
-    seccion.style.display = seccion.style.display === "none" ? "block" : "none";
-  });
-  
+
+}
+        
   mostrarProductos();
   
